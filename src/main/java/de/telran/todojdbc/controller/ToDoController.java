@@ -5,12 +5,13 @@ import de.telran.todojdbc.model.ToDo;
 import de.telran.todojdbc.repository.CommonRepository;
 import de.telran.todojdbc.validation.ToDoValidationError;
 import de.telran.todojdbc.validation.ToDoValidationErrorBuilder;
-import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/api")
