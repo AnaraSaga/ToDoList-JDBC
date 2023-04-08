@@ -2,6 +2,7 @@ package de.telran.todojdbc.repository;
 
 
 import de.telran.todojdbc.model.ToDo;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
@@ -21,6 +22,7 @@ public class ToDoRepository implements CommonRepository<ToDo> {
 
     private final NamedParameterJdbcTemplate jdbcTemplate;
 
+    @Autowired
     public ToDoRepository(NamedParameterJdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
